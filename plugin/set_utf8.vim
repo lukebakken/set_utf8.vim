@@ -43,9 +43,9 @@ if ! has("multi_byte")
 endif
 
 " avoid messing up the keyboard encoding
-if &termencoding == ""
-	let &termencoding = &encoding
-endif
+" if &termencoding == ""
+" 	let &termencoding = &encoding
+" endif
 
 " if "printencoding" is supported, avoid messing it up
 if exists("+printencoding") && (&printencoding == "")
@@ -71,4 +71,4 @@ set encoding=utf-8
 setglobal fileencoding=utf-8
 
 " to use a BOM with newly created Unicode files
-setglobal bomb
+setglobal nobomb
